@@ -27,7 +27,7 @@ Ensure you have the following installed:
 ### 1. Clone the Repository
 ```bash
 git clone <repository-url>
-cd task-management-system
+cd TASK_MANAGEMENT
 ```
 
 ### 2. Install Dependencies
@@ -73,7 +73,7 @@ The server will be accessible at `http://localhost:3000/`.
 ### **User Management**
 
 #### Create User
-**POST** `/api/users`
+**POST** `/api/v1/users`
 - **Request Body:**
   ```json
   {
@@ -92,13 +92,13 @@ The server will be accessible at `http://localhost:3000/`.
   ```
 
 #### Delete User
-**DELETE** `/api/users/:id`
+**DELETE** `/api/v1/users/:id`
 - Admin-only route to delete a user by ID.
 
 ### **Project Management**
 
 #### Create Project
-**POST** `/api/projects`
+**POST** `/api/v1/projects`
 - **Request Body:**
   ```json
   {
@@ -115,7 +115,7 @@ The server will be accessible at `http://localhost:3000/`.
   ```
 
 #### Update Project
-**PUT** `/api/projects/:id`
+**PUT** `/api/v1/projects/:id`
 - **Request Body:**
   ```json
   {
@@ -133,7 +133,7 @@ The server will be accessible at `http://localhost:3000/`.
 ### **Task Management**
 
 #### Create Task
-**POST** `/api/tasks`
+**POST** `/api/v1/tasks`
 - **Request Body:**
   ```json
   {
@@ -153,7 +153,7 @@ The server will be accessible at `http://localhost:3000/`.
   ```
 
 #### Fetch Task by ID
-**GET** `/api/tasks/:id`
+**GET** `/api/v1/tasks/:id`
 - **Response:**
   ```json
   {
@@ -171,11 +171,11 @@ The server will be accessible at `http://localhost:3000/`.
 
 ## Testing the API
 
-Use [Postman](https://www.postman.com/) or [curl](https://curl.se/) to test the endpoints. Example curl commands are provided below:
+Use [Postman](https://www.postman.com/) to test the endpoints. Example curl commands are provided below:
 
 ### Example: Create a Task
 ```bash
-curl -X POST http://localhost:3000/api/tasks \
+curl -X POST http://localhost:3000/api/v1/tasks \
 -H "Content-Type: application/json" \
 -H "Authorization: Bearer <JWT_TOKEN>" \
 -d '{
@@ -192,10 +192,10 @@ curl -X POST http://localhost:3000/api/tasks \
 ## Debugging Tips
 - Ensure the `.env` file is correctly set up.
 - Check MySQL database credentials and connection.
-- Inspect logs for errors using `console.log` or a logging library.
+- Inspect logs for errors using `console.log`.
 
 ---
 
 ## License
-This project is licensed under the MIT License.
+This project is Part of a assingment and are under no Lincense.
 
